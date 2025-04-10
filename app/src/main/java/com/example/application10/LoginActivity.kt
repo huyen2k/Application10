@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_login)
+        setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
 
@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.signupText.setOnClickListener {
-            var intent = Intent(this, LoginActivity::class.java)
+            var intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
     }
